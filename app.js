@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-// const mongoose = require('mongoose');
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -9,16 +8,6 @@ app.use(function (req, res, next) {
 });
 
 
-// mongoose connection
-// mongoose.Promise = global.Promise;
-// mongoose.connect("mongodb://localhost/task1", { useNewUrlParser: true, useUnifiedTopology: true }, function (err, db) {
-//     if (err) {
-//         console.log(err);
-//     }
-//     else {
-//         console.log("database has been connected!");
-//     }
-// });
 
 
 require('./routes/routes.js')(app);
